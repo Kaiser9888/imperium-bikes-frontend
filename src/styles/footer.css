@@ -1,0 +1,223 @@
+.footer {
+  background-color: var(--bg-dark);
+  color: white;
+  padding: var(--spacing-2xl) 5%;
+  margin-top: auto;
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-2xl);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.footer-section h3,
+.footer-section h4,
+.footer-section h5 {
+  color: var(--gold-main);
+  margin-bottom: var(--spacing-lg);
+  font-family: var(--font-serif);
+}
+
+.footer-logo h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: var(--spacing-sm);
+}
+
+.footer-logo p {
+  color: var(--secondary-text);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section li {
+  margin-bottom: var(--spacing-sm);
+}
+
+.footer-section a {
+  color: var(--secondary-text);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.footer-section a:hover {
+  color: var(--gold-main);
+  transform: translateX(4px);
+}
+
+/* Redes Sociais */
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.social-link:hover {
+  background-color: rgba(176, 155, 130, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(176, 155, 130, 0.2);
+}
+
+.social-link.instagram:hover {
+  background-color: rgba(225, 48, 108, 0.2);
+}
+
+.social-link.tiktok:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.social-link.youtube:hover {
+  background-color: rgba(255, 0, 0, 0.2);
+}
+
+/* Contato */
+.contact-info {
+  margin-top: var(--spacing-lg);
+}
+
+.contact-info h5 {
+  margin-bottom: var(--spacing-sm);
+  font-size: 1rem;
+}
+
+.email-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--gold-main);
+  color: var(--bg-dark);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.email-link:hover {
+  background-color: var(--gold-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(176, 155, 130, 0.4);
+}
+
+/* Divisor */
+.footer-divider {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: var(--spacing-xl) 0;
+}
+
+/* Bottom Section */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+}
+
+.copyright {
+  color: var(--secondary-text);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  gap: var(--spacing-lg);
+}
+
+.footer-links a {
+  color: var(--secondary-text);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--gold-main);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .footer {
+    padding: var(--spacing-xl) 5%;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacing-md);
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .social-links {
+    gap: var(--spacing-sm);
+  }
+
+  .social-link,
+  .email-link {
+    padding: var(--spacing-sm);
+    font-size: 0.85rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: var(--spacing-lg) 5%;
+  }
+
+  .footer-content {
+    gap: var(--spacing-lg);
+  }
+
+  .footer-logo h3 {
+    font-size: 1.5rem;
+  }
+
+  .social-link,
+  .email-link {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm);
+  }
+}

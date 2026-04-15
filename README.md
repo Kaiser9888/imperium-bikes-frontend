@@ -1,70 +1,129 @@
-# Getting Started with Create React App
+# 🏆 Imperium Bikes - Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Marketplace premium de bicicletas e acessórios com design system exclusivo.
 
-## Available Scripts
+## 🎨 Design System
 
-In the project directory, you can run:
+- **Cores Premium**: Ouro e tonalidades clássicas
+- **Tipografia**: Cormorant Garamond + Inter
+- **Componentes**: Totalmente responsivos
+- **Acessibilidade**: WCAG compliant
 
-### `npm start`
+## 🚀 Requisitos
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Node.js 16+
+- npm ou yarn
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📦 Instalação
 
-### `npm test`
+```bash
+npm install
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🔧 Configuração
 
-### `npm run build`
+Crie um arquivo `.env` na raiz do projeto:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+cp .env.example .env
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Edite o `.env` com sua URL de API:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+VITE_API_URL=http://localhost:8080
+```
 
-### `npm run eject`
+## 💻 Desenvolvimento
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Inicie o servidor de desenvolvimento:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm run dev
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+A aplicação estará disponível em `http://localhost:5173`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🏗️ Build
 
-## Learn More
+Para criar uma build de produção:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm run build
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📁 Estrutura do Projeto
 
-### Code Splitting
+```
+src/
+├── components/        # Componentes reutilizáveis
+│   ├── Header.jsx
+│   ├── ProductCard.jsx
+│   └── Footer.jsx      # 🆕 Footer com redes sociais
+├── pages/            # Páginas da aplicação
+│   ├── Home.jsx
+│   ├── Login.jsx
+│   ├── Registrar.jsx
+│   ├── ProductDetail.jsx
+│   ├── Profile.jsx
+│   ├── MyListings.jsx
+│   ├── CreateListing.jsx
+│   ├── Favorites.jsx
+│   ├── Chat.jsx
+│   ├── Videos.jsx       # 🆕 Feed de vídeos
+│   ├── Forum.jsx        # 🆕 Fórum de discussões
+│   └── SocialFeed.jsx   # 🆕 Feed social
+├── services/         # Integração com API
+│   └── api.js
+├── hooks/            # Hooks customizados
+│   └── index.js
+├── styles/           # CSS global e componentes
+│   ├── theme.css
+│   ├── header.css
+│   ├── home.css
+│   ├── auth.css
+│   ├── productCard.css
+│   ├── productDetail.css
+│   ├── profile.css
+│   ├── myListings.css
+│   ├── createListing.css
+│   ├── favorites.css
+│   ├── chat.css
+│   ├── videos.css      # 🆕
+│   ├── forum.css       # 🆕
+│   └── footer.css      # 🆕 Footer com redes sociais
+├── App.jsx           # Componente principal
+└── main.jsx          # Entry point
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🔗 Integração com Backend
 
-### Analyzing the Bundle Size
+A aplicação conecta automaticamente com o backend em `http://localhost:8080`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**Endpoints disponíveis:**
+- `GET /api/anuncios` - Listar anúncios
+- `GET /api/anuncios/:id` - Obter detalhe
+- `POST /api/usuarios/login` - Login
+- `POST /api/usuarios/registrar` - Registrar
+- `GET/POST /api/favoritos` - Gerenciar favoritos
+- `GET/POST /api/chat/conversas` - Chat
+- `GET/POST /api/videos` - Feed de vídeos 🆕
+- `GET/POST /api/forum/topicos` - Fórum de discussões 🆕
+- `GET/POST /api/posts` - Feed social 🆕
 
-### Making a Progressive Web App
+## 🎯 Recursos Implementados
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+✅ Home com filtros
+✅ Sistema de autenticação
+✅ Catálogo de produtos
+✅ Página de detalhe
+✅ Sistema de favoritos
+✅ Design premium responsivo
+✅ **Feed de Vídeos** 🆕
+✅ **Fórum de Discussões** 🆕
+✅ **Feed Social** 🆕
+✅ **Sistema de Curtidas** 🆕
+✅ **Comentários** 🆕
+✅ **Sistema de Destaques** 🆕
+✅ **Checkout de Pagamentos** 🆕
+✅ **Footer com Redes Sociais** 🆕

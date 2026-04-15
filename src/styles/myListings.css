@@ -1,0 +1,160 @@
+.my-listings {
+  min-height: 100vh;
+  padding: var(--spacing-2xl) 5%;
+  background-color: var(--bg-main);
+}
+
+.listings-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-2xl);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.listings-header h1 {
+  font-size: 2.2rem;
+}
+
+.listings-table {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--bg-light);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: var(--bg-main);
+  border-bottom: 2px solid var(--border);
+}
+
+th {
+  padding: var(--spacing-lg);
+  text-align: left;
+  font-weight: 600;
+  color: var(--primary-text);
+  font-size: 0.95rem;
+}
+
+td {
+  padding: var(--spacing-lg);
+  border-bottom: 1px solid var(--border);
+  color: var(--secondary-text);
+}
+
+tbody tr:hover {
+  background-color: var(--bg-main);
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.status {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-active {
+  background-color: rgba(46, 125, 50, 0.1);
+  color: var(--success);
+}
+
+.status-inactive {
+  background-color: rgba(198, 40, 40, 0.1);
+  color: var(--danger);
+}
+
+.actions {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.btn-small {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background-color: var(--gold-light);
+  color: var(--primary-text);
+  border: 1px solid var(--border);
+  transition: all 0.2s ease;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-small:hover {
+  background-color: var(--gold-main);
+  color: white;
+  border-color: var(--gold-main);
+}
+
+.btn-small.btn-danger {
+  background-color: rgba(198, 40, 40, 0.1);
+  color: var(--danger);
+  border-color: var(--danger);
+}
+
+.btn-small.btn-danger:hover {
+  background-color: var(--danger);
+  color: white;
+  border-color: var(--danger);
+}
+
+.empty-state {
+  max-width: 600px;
+  margin: var(--spacing-2xl) auto;
+  text-align: center;
+  padding: var(--spacing-2xl);
+}
+
+.empty-state h2 {
+  margin-bottom: var(--spacing-md);
+}
+
+.empty-state p {
+  margin-bottom: var(--spacing-lg);
+  color: var(--secondary-text);
+}
+
+@media (max-width: 768px) {
+  .listings-header {
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    align-items: flex-start;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+
+  th, td {
+    padding: var(--spacing-md);
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .btn-small {
+    display: block;
+    width: 100%;
+  }
+}
+

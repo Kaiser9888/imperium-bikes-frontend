@@ -1,0 +1,235 @@
+:root {
+  /* Background Colors */
+  --bg-main: #f4f0ea;
+  --bg-light: #ffffff;
+  --bg-dark: #1f1b17;
+
+  /* Text Colors */
+  --primary-text: #1c1b17;
+  --secondary-text: #7a6a5a;
+  --tertiary-text: #9b8f80;
+
+  /* Borders */
+  --border: #e2dcd2;
+  --border-strong: #b09b82;
+
+  /* Gold/Premium */
+  --gold-light: #d4cdc2;
+  --gold-main: #b09b82;
+  --gold-dark: #8a765d;
+
+  /* Status Colors */
+  --success: #2e7d32;
+  --warning: #f57c00;
+  --danger: #c62828;
+  --info: #0277bd;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+
+  /* Font */
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-sans: 'Inter', sans-serif;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 12px 24px rgba(0, 0, 0, 0.12);
+  --shadow-premium: 0 12px 20px -8px rgba(75, 60, 45, 0.2);
+
+  /* Z-Index */
+  --z-dropdown: 1000;
+  --z-sticky: 100;
+  --z-modal: 1300;
+  --z-tooltip: 1400;
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-main);
+  color: var(--primary-text);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Layout Structure */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+/* Links */
+a {
+  color: var(--primary-text);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--gold-main);
+}
+
+/* Buttons */
+button {
+  font-family: var(--font-sans);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+/* Inputs */
+input,
+textarea,
+select {
+  font-family: var(--font-sans);
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Lists */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Utilities */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.mb-sm { margin-bottom: var(--spacing-sm); }
+.mb-md { margin-bottom: var(--spacing-md); }
+.mb-lg { margin-bottom: var(--spacing-lg); }
+.mb-xl { margin-bottom: var(--spacing-xl); }
+
+.mt-sm { margin-top: var(--spacing-sm); }
+.mt-md { margin-top: var(--spacing-md); }
+.mt-lg { margin-top: var(--spacing-lg); }
+.mt-xl { margin-top: var(--spacing-xl); }
+
+/* Loading */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-2xl);
+  color: var(--secondary-text);
+}
+
+.loading::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--gold-main);
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-left: var(--spacing-md);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Error Messages */
+.error-message {
+  background-color: rgba(198, 40, 40, 0.1);
+  border: 1px solid var(--danger);
+  color: var(--danger);
+  padding: var(--spacing-lg);
+  border-radius: 4px;
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Success Messages */
+.success-message {
+  background-color: rgba(46, 125, 50, 0.1);
+  border: 1px solid var(--success);
+  color: var(--success);
+  padding: var(--spacing-lg);
+  border-radius: 4px;
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+}
