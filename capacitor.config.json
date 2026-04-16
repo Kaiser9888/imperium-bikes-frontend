@@ -1,0 +1,6 @@
+{
+  "appId": "com.imperiumbikes.app",
+  "appName": "Imperium Bikes",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}
