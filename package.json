@@ -6,7 +6,12 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "cap:sync": "npx cap sync android",
+    "cap:build": "npm run build && npx cap sync android",
+    "android:debug": "cd android && gradlew.bat assembleDebug && cd ..",
+    "android:release": "cd android && gradlew.bat assembleRelease && cd ..",
+    "android:clean": "cd android && gradlew.bat clean && cd .."
   },
   "dependencies": {
     "@capacitor/android": "^8.3.1",
